@@ -22,7 +22,7 @@ long_description = (
     'Detailed Documentation\n'
     '**********************\n'
     + '\n' +
-    read('abstract', 'downloadmarshal_pfg', 'README.txt')
+    read('README.txt')
     + '\n' +
     'Contributors\n'
     '************\n'
