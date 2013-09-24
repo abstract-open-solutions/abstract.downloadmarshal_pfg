@@ -5,6 +5,7 @@
     <permission name="abstract.downloadmarshal_pfg: Add DownloadMarshalAdapter" acquire="False">
       <role name="Manager" />
       <role name="Contributor" />
+      <role name="Site Administrator" />
     </permission>
   </permissions>
 </rolemap>

@@ -41,10 +41,10 @@ setup(name='abstract.downloadmarshal_pfg',
       # Get more strings from
       # http://pypi.python.org/pypi?:action=list_classifiers
       classifiers=[
-        'Framework :: Plone',
-        'Intended Audience :: Developers',
-        'License :: OSI Approved :: GNU General Public License (GPL)',
-        ],
+          'Framework :: Plone',
+          'Intended Audience :: Developers',
+          'License :: OSI Approved :: GNU General Public License (GPL)',
+      ],
       keywords='',
       author='',
       author_email='',
@@ -54,10 +54,10 @@ setup(name='abstract.downloadmarshal_pfg',
       namespace_packages=['abstract', ],
       include_package_data=True,
       zip_safe=False,
-      install_requires=['setuptools',
-        # -*- Extra requirements: -*-
-        'Products.PloneFormGen',
-        'abstract.downloadmarshal',
+      install_requires=[
+          'setuptools',
+          'Products.PloneFormGen',
+          'abstract.downloadmarshal'
       ],
       tests_require=tests_require,
       extras_require=dict(tests=tests_require),
@@ -66,7 +66,5 @@ setup(name='abstract.downloadmarshal_pfg',
       # -*- entry_points -*-
       [z3c.autoinclude.plugin]
       target = plone
-      """,
-      setup_requires=["PasteScript"],
-      paster_plugins=["ZopeSkel"],
+      """
       )

@@ -4,8 +4,7 @@
     i18n_domain="abstract.downloadmarshal_pfg">
 
   <!-- configure your content components here -->
-  
-  <!-- -*- extra stuff goes here -*- -->
+
   <class class=".downloadmarshaladapter.DownloadMarshalAdapter">
     <require
         permission="zope2.View"

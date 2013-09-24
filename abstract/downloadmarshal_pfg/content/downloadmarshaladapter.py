@@ -13,8 +13,6 @@ from Products.ATContentTypes.content import base
 from Products.ATContentTypes.content import schemata
 from Products.CMFPlone.interfaces import IPloneSiteRoot
 
-# -*- Message Factory Imported Here -*-
-
 from Products.PloneFormGen.content.actionAdapter import \
     FormActionAdapter, FormAdapterSchema
 
@@ -26,8 +24,6 @@ from abstract.downloadmarshal_pfg import _
 
 
 DownloadMarshalAdapterSchema = FormAdapterSchema.copy() + atapi.Schema((
-
-    # -*- Your Archetypes field definitions here ... -*-
 
     atapi.StringField(
         'resource_path',
@@ -59,7 +55,6 @@ class DownloadMarshalAdapter(FormActionAdapter):
 
     title = atapi.ATFieldProperty('title')
     description = atapi.ATFieldProperty('description')
-    # -*- Your ATSchema to Python Property Bridges Here ... -*-
 
     security = ClassSecurityInfo()
 
@@ -68,8 +63,10 @@ class DownloadMarshalAdapter(FormActionAdapter):
         request = REQUEST or self.REQUEST
         resource = self._get_resource()
         marshal = getMultiAdapter((resource, request), IMarshal)
-        url = marshal.generate_token_url(resource)
-        request.response.redirect(url)
+        request.set(
+            'download_data',
+            marshal.generate_token_url_data(resource)
+        )
 
     def _get_resource(self):
         resource_path = self.getResource_path()

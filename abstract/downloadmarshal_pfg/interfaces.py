@@ -1,8 +1,9 @@
 from zope.interface import Interface
-# -*- Additional Imports Here -*-
+
+
+class IBrowserLayer(Interface):
+    """Abstract download marshal browser layer"""
 
 
 class IDownloadMarshalAdapter(Interface):
     """Description of the Example Type"""
-
-    # -*- schema definition goes here -*-

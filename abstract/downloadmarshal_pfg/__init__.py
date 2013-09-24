@@ -11,8 +11,8 @@ from Products.CMFCore import utils
 # This will be imported with the special name "_" in most modules. Strings
 # like _(u"message") will then be extracted by i18n tools for translation.
 
-downloadmarshal_pfgMessageFactory = MessageFactory('abstract.downloadmarshal_pfg')
-_ = downloadmarshal_pfgMessageFactory
+messageFactory = MessageFactory('abstract.downloadmarshal_pfg')
+_ = messageFactory
 
 
 def initialize(context):
